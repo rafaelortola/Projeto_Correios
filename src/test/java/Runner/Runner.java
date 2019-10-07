@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
                // features = "C:/ProjetosGit/Projeto_Correios/src/test/features/")
         plugin = { "html:target/cucumberHtmlReport" },
         features = "C:/ProjetosGit/Projeto_Correios/src/test/features/",
-        tags = { "@test" },
+        tags = { "@SmokeTest" },
         glue = { "StepsDefinition" }
         )
         //dryRun = false,

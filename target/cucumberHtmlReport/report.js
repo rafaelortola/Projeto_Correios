@@ -10,7 +10,7 @@ formatter.scenario({
   "keyword": "Cenário",
   "tags": [
     {
-      "name": "@test"
+      "name": "@SmokeTest"
     }
   ]
 });
@@ -53,6 +53,58 @@ formatter.step({
 });
 formatter.match({
   "location": "Steps.endereço_é_exibido_corretamente()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.uri("file:buscaMaisDeUmLogradouro.feature");
+formatter.feature({
+  "name": "Buscar mais de um Logradouro",
+  "description": "",
+  "keyword": "Funcionalidade"
+});
+formatter.scenario({
+  "name": "Usuário realiza busca de mais de um logradouro",
+  "description": "",
+  "keyword": "Cenário",
+  "tags": [
+    {
+      "name": "@SmokeTest"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Que informo o nome de um logradouro",
+  "keyword": "Dado "
+});
+formatter.match({
+  "location": "Steps.informo_um_nome_de_um_logradouro()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Clico no botão buscar",
+  "keyword": "Quando "
+});
+formatter.match({
+  "location": "Steps.clico_no_botão_buscar()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Mais de um endereço é exibido",
+  "keyword": "Então "
+});
+formatter.match({
+  "location": "Steps.mais_de_um_endereço_é_exibido()"
 });
 formatter.result({
   "status": "passed"

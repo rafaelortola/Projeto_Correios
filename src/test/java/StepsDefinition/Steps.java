@@ -1,7 +1,9 @@
 package StepsDefinition;
 
 import PageObjects.buscaCep;
+import PageObjects.buscaLogradouro;
 import PageObjects.resultadoBuscaCepEndereco;
+import PageObjects.resultadoBuscaLogradouro;
 import Suporte.Web;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -29,6 +31,13 @@ public class Steps {
                     .digitaCEP("06401160");
     }
 
+    @Dado("Que informo o nome de um logradouro")
+    public void informo_um_nome_de_um_logradouro() {
+        new buscaLogradouro(navegador)
+                .digitaLogradouro("Rua chico anísio")
+                .selecionarOpcaoDeBusca();
+    }
+
     @Dado("Seleciono uma opção no campo CEP de:")
     public void seleciono_uma_opção_no_campo_CEP_de() {
         new buscaCep(navegador)
@@ -45,6 +54,12 @@ public class Steps {
     public void endereço_é_exibido_corretamente() {
         new resultadoBuscaCepEndereco(navegador)
                 .encontraCep();
+    }
+
+    @Então("Mais de um endereço é exibido")
+    public void mais_de_um_endereço_é_exibido() {
+        new resultadoBuscaLogradouro(navegador)
+                .encontraLogradouro();
     }
 
     @After
