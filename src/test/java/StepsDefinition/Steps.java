@@ -28,13 +28,13 @@ public class Steps {
     @Dado("Que informo um cep válido")
     public void informo_um_CEP_válido() {
             new buscaCep(navegador)
-                    .digitaCEP("06401160");
+                    .digitaCEP("21721600");
     }
 
     @Dado("Que informo o nome de um logradouro")
     public void informo_um_nome_de_um_logradouro() {
         new buscaLogradouro(navegador)
-                .digitaLogradouro("Rua chico anísio")
+                .digitaLogradouro("Avenida Brasil")
                 .selecionarOpcaoDeBusca();
     }
 
